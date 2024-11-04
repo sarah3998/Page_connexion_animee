@@ -1,0 +1,147 @@
+/*1*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+/*2-modification container*/
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: mistyrose;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    padding-bottom: 90px;
+}
+
+/*10-modification span*/
+.container span{
+    position:absolute;
+    border-radius: 50px;
+    background: red;
+    z-index: -1;
+    pointer-events: none;
+    animation: animate 10s ease-out infinite; /*animation 10s*/
+}
+
+/*11-modification span*/
+.container spin{
+    position:absolute;
+    background: red;
+    z-index: -1;
+    pointer-events: none;
+    animation: animate 10s ease-out infinite; /*animation 10s*/
+}
+
+/*12- @keyframes definit la rapidité, l'opacité et le mouvement des cubes*/
+@keyframes animate{
+    /*12-  animation presente sans controle sur la rapidité, opacité 0, cube ne tourne pas en rotation//scale donne la mesure du coté du cube*/
+    0%{
+        transform: translateY(-600px) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    /*13- rapidité d'animation (10%), opacité 1, cube ne tourne pas en rotation*/
+    10%{
+        opacity: 1;
+    }
+
+    /*14-rapidité d'animation (90%), opacité 1, cube ne tourne pas en rotation*/
+    90%{
+        opacity: 1;
+    }
+
+    /*15-rapidité d'animation (100%), opacité 1, cube tourne en rotation*/
+    100%{
+        transform: translateY(1200px) scale(1) rotate(360deg);
+        opacity: 0;
+    }
+   
+}
+
+
+/*3-modification form container*/
+.container form{
+    width: 350px;
+    background: rgba(255,255,255,.3);
+    padding: 45px 25px;
+    box-shadow: 0 6px 8px rgba(0,0,0,.3);
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+    border-top: 2px solid #fff9;
+    border-left: 2px solid #fff9;
+ 
+    
+}
+
+/*4-modification i du form*/
+.container form i{
+    display: block;
+    line-height: 100px; /*mettre l'icone au milieu du cercle*/
+    text-align: center;
+    color: #999;
+    border: 3px solid darkcyan;
+    border-radius: 50px;
+    box-sizing: border-box;
+    width: 100px; /*definir la largeur*/
+    height: 100px; /*definir la hauteur*/
+    font-size: 60px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+/*5-modification box du form*/
+.container form .box{
+    height: 40px;
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    margin: 10px 0;
+    font-size: 17px;
+    color: #666;
+    background: rgba(255,255,255,.4);
+    box-shadow: 0 1px 2px rgba(0,0,0,.3);
+    text-transform: none;
+}
+
+/*6-modification input du form*/
+.container form input[type="submit"]{
+    height: 38px;
+    width: 140px;
+    border-radius: 50px;
+    color: #fff;
+    background: darkcyan;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3);
+}
+
+/*7-modification input du form*/
+.container form input[type="submit"]:hover{
+    letter-spacing: 2px; /*creer un effet vur le boutton login*/
+    opacity: 8;
+}
+
+
+/*8-modification du paragraphe P du form*/
+.container form p{
+    padding: 7px 0; /*espacement*/
+    color: #666;
+}
+
+/*9-modification du a de P du form*/
+.container form p a {
+    color: #333;
+}
